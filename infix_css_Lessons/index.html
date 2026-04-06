@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KHÁI NIỆM MẪU ĐỊNH DẠNG CSS | Infix CSS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed": "#d7e2ff",
+                        "inverse-primary": "#acc7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb957",
+                        "secondary-fixed": "#83fc8e",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1d",
+                        "primary-container": "#0056b3",
+                        "outline-variant": "#c2c6d4",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#002106",
+                        "tertiary-container": "#7c4f00",
+                        "primary-fixed-dim": "#acc7ff",
+                        "outline": "#727784",
+                        "tertiary-fixed": "#ffddb5",
+                        "surface-tint": "#115cb9",
+                        "on-secondary-container": "#007327",
+                        "tertiary": "#5c3a00",
+                        "on-tertiary-fixed-variant": "#643f00",
+                        "on-tertiary-fixed": "#2a1800",
+                        "background": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary-container": "#80f98b",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "on-surface-variant": "#424752",
+                        "on-tertiary-container": "#ffc579",
+                        "on-primary-fixed-variant": "#004491",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "surface-container": "#edeeef",
+                        "on-primary-container": "#bbd0ff",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#006e25",
+                        "on-background": "#191c1d",
+                        "surface-variant": "#e1e3e4",
+                        "secondary-fixed-dim": "#66df75",
+                        "primary": "#003f87",
+                        "on-primary-fixed": "#001a40",
+                        "on-secondary-fixed-variant": "#00531a",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "brand": ["'Zalando Sans Expanded'", "Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        @font-face {
+            font-family: 'Zalando Sans Expanded';
+            src: url('https://fonts.cdnfonts.com/css/zalando-sans-expanded');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8f9fa]/80 dark:bg-[#191c1d]/80 backdrop-blur-md shadow-[0px_12px_32px_rgba(25,28,29,0.06)] font-['Inter'] font-medium tracking-tight antialiased">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-10 h-20 relative">
+<a class="text-2xl font-black tracking-tighter text-[#191c1d] dark:text-[#f8f9fa] font-brand" href="{{DATA:SCREEN:SCREEN_49}}">
+                Infix CSS
+            </a>
+<div class="hidden md:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:text-[#003f87] transition-colors hover:opacity-80" href="{{DATA:SCREEN:SCREEN_49}}">Home</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:text-[#003f87] transition-colors hover:opacity-80" href="{{DATA:SCREEN:SCREEN_38}}">Team</a>
+<a class="text-[#003f87] dark:text-[#0056b3] font-bold border-b-2 border-[#003f87] pb-1 hover:opacity-80" href="{{DATA:SCREEN:SCREEN_54}}">Lesson</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 rounded-full bg-gradient-to-br from-primary to-primary-container text-white font-medium hover:opacity-90 active:scale-95 transform transition-all duration-150">
+                    Get Started
+                </button>
+</div>
+<div class="bg-[#f3f4f5] dark:bg-[#424752] h-[1px] w-full absolute bottom-0 left-0"></div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-10 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-20">
+<div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-secondary-container text-on-secondary-container text-sm font-semibold tracking-wide uppercase">
+                CSS Foundation
+            </div>
+<h1 class="text-5xl md:text-7xl font-extrabold text-on-surface tracking-tighter mb-8 leading-[1.1]">
+                KHÁI NIỆM MẪU <br/> ĐỊNH DẠNG CSS.
+            </h1>
+<p class="text-xl text-on-surface-variant max-w-3xl leading-relaxed">
+                Khám phá sức mạnh của Cascading Style Sheets trong việc định hình trải nghiệm người dùng hiện đại thông qua sự tách biệt hoàn hảo giữa nội dung và phong cách trình bày.
+            </p>
+</header>
+<!-- Section 1: Khái niệm & Đặc điểm -->
+<section class="mb-24">
+<div class="flex items-center gap-4 mb-10">
+<div class="h-[2px] w-12 bg-primary"></div>
+<h2 class="text-2xl font-bold tracking-tight text-primary">01. Khái niệm &amp; Đặc điểm</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Definition Card -->
+<div class="md:col-span-3 bg-surface-container-lowest p-10 rounded-xl shadow-[0px_12px_32px_rgba(25,28,29,0.04)]">
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="w-full md:w-1/2">
+<h3 class="text-3xl font-bold mb-6 text-on-surface">CSS là gì?</h3>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+                                CSS (Cascading Style Sheets) là ngôn ngữ được sử dụng để tìm và định dạng các thành phần được tạo ra bởi các ngôn ngữ đánh dấu (như HTML). 
+                            </p>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                                Nó đóng vai trò là "người thợ may" thiết kế bộ trang phục lộng lẫy cho khung xương HTML của website.
+                            </p>
+</div>
+<div class="w-full md:w-1/2 h-64 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern minimalist workspace with high-end computer screen showing colorful code syntax highlighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw3a5q82I5ty9uqM-_7xgMLtKh072Z4wsa7-hq7obIRtyOTtYj3wb-TGsJuUf6pzanubdFrExbCGXRGFohGO4g7v3xOzQByGXbgnxo_EdtuquCAnAXrNjhHuwE-wfVlR2En5Lq80WSMT9A7k-6khgmwq6m3QNuZE0-aPXXIkzcgpp-axnmYXB9m9wf-EOtowzrNaM6Vl_88p4o1zjsukucmBQw-xaf-zFcyQ8rbpCvU4Caj84b8RJ0zcJsf1PEgthFjqAuXDFkOxY"/>
+</div>
+</div>
+</div>
+<!-- Characteristics -->
+<div class="bg-primary-container/5 p-8 rounded-xl border border-primary/10">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl" data-icon="code">code</span>
+<h4 class="text-xl font-bold mb-3 text-on-surface">Ngôn ngữ riêng</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg">CSS có cú pháp độc lập hoàn toàn với HTML, cho phép quản lý mã nguồn một cách khoa học và dễ bảo trì.</p>
+</div>
+<div class="bg-secondary-container/10 p-8 rounded-xl border border-secondary/10">
+<span class="material-symbols-outlined text-secondary mb-4 text-4xl" data-icon="history_edu">history_edu</span>
+<h4 class="text-xl font-bold mb-3 text-on-surface">Định nghĩa một lần</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg">Bạn chỉ cần định nghĩa phong cách một lần và có thể áp dụng cho hàng nghìn trang web khác nhau cùng lúc.</p>
+</div>
+<div class="bg-tertiary-fixed/10 p-8 rounded-xl border border-tertiary/10">
+<span class="material-symbols-outlined text-tertiary mb-4 text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="text-xl font-bold mb-3 text-on-surface">Tối ưu hiệu năng</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg">Giảm dung lượng file HTML, tăng tốc độ tải trang và giúp trình duyệt xử lý giao diện mượt mà hơn.</p>
+</div>
+</div>
+</section>
+<!-- Section 2: Cấu trúc CSS -->
+<section class="mb-24">
+<div class="flex items-center gap-4 mb-10">
+<div class="h-[2px] w-12 bg-primary"></div>
+<h2 class="text-2xl font-bold tracking-tight text-primary">02. Cấu trúc CSS</h2>
+</div>
+<div class="bg-surface-container-high rounded-xl overflow-hidden shadow-inner">
+<div class="flex items-center gap-2 px-6 py-4 bg-surface-dim/30 border-b border-outline-variant/20">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></div>
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="ml-4 text-xs font-mono text-on-surface-variant uppercase tracking-widest">CSS Syntax</span>
+</div>
+<div class="p-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<div class="mb-8">
+<h3 class="text-2xl font-bold mb-4">Cú pháp chuẩn</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed text-lg">Một bộ chọn (Selector) đi kèm với một khối khai báo chứa các thuộc tính và giá trị được đặt trong dấu ngoặc nhọn.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-lowest border border-outline-variant/10">
+<div class="bg-primary-container text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">1</div>
+<div>
+<p class="font-bold text-on-surface">Selector</p>
+<p class="text-sm text-on-surface-variant text-lg">Thành phần HTML bạn muốn định dạng.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-lowest border border-outline-variant/10">
+<div class="bg-primary-container text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">2</div>
+<div>
+<p class="font-bold text-on-surface">Property &amp; Value</p>
+<p class="text-sm text-on-surface-variant text-lg">Thuộc tính cần đổi và giá trị tương ứng.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="font-mono text-lg bg-[#1e1e1e] p-10 rounded-xl text-blue-200 shadow-2xl">
+<div class="mb-2"><span class="text-pink-400">h1</span> {</div>
+<div class="pl-8"><span class="text-cyan-400">color</span>: <span class="text-orange-300">red</span>;</div>
+<div class="pl-8"><span class="text-cyan-400">border</span>: <span class="text-orange-300">2px solid blue</span>;</div>
+<div class="pl-8"><span class="text-cyan-400">font-family</span>: <span class="text-orange-300">Tahoma</span>;</div>
+<div>}</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Các cách triển khai -->
+<section>
+<div class="flex items-center gap-4 mb-10">
+<div class="h-[2px] w-12 bg-primary"></div>
+<h2 class="text-2xl font-bold tracking-tight text-primary">03. Các cách triển khai</h2>
+</div>
+<div class="space-y-12">
+<!-- a) Internal CSS -->
+<div class="group grid grid-cols-1 md:grid-cols-5 gap-0 rounded-xl overflow-hidden bg-surface-container-lowest border border-outline-variant/10 hover:shadow-xl transition-shadow duration-500">
+<div class="md:col-span-2 p-10 bg-primary/5 flex flex-col justify-center">
+<h4 class="text-2xl font-bold mb-4 text-primary">a) CSS trong (Internal)</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                            Được đặt trong cặp thẻ <code class="bg-primary-container/10 px-1 rounded text-primary">&lt;style&gt;</code> bên trong phần <code class="bg-primary-container/10 px-1 rounded text-primary">&lt;head&gt;</code> của tài liệu HTML. Thích hợp cho các định dạng chỉ dùng duy nhất cho một trang.
+                        </p>
+</div>
+<div class="md:col-span-3 p-10 bg-on-surface font-mono text-sm overflow-x-auto">
+<pre class="text-blue-300"><code><span class="text-gray-500">&lt;!-- HTML file --&gt;</span>
+<span class="text-green-400">&lt;head&gt;</span>
+  <span class="text-green-400">&lt;style&gt;</span>
+    <span class="text-pink-400">body</span> { <span class="text-cyan-400">background-color</span>: <span class="text-orange-300">linen</span>; }
+    <span class="text-pink-400">h1</span> { <span class="text-cyan-400">color</span>: <span class="text-orange-300">maroon</span>; }
+  <span class="text-green-400">&lt;/style&gt;</span>
+<span class="text-green-400">&lt;/head&gt;</span></code></pre>
+</div>
+</div>
+<!-- b) External CSS -->
+<div class="group grid grid-cols-1 md:grid-cols-5 gap-0 rounded-xl overflow-hidden bg-surface-container-lowest border border-outline-variant/10 hover:shadow-xl transition-shadow duration-500">
+<div class="md:col-span-2 p-10 bg-secondary/5 flex flex-col justify-center">
+<h4 class="text-2xl font-bold mb-4 text-secondary">b) CSS ngoài (External)</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                            Cách chuyên nghiệp nhất: viết CSS trong một file .css riêng biệt và liên kết nó với HTML thông qua thẻ <code class="bg-secondary-container/20 px-1 rounded text-secondary-container">&lt;link&gt;</code>. Giúp tối ưu bộ nhớ đệm trình duyệt.
+                        </p>
+</div>
+<div class="md:col-span-3 p-10 bg-on-surface font-mono text-sm overflow-x-auto">
+<pre class="text-blue-300"><code><span class="text-gray-500">&lt;!-- HTML file --&gt;</span>
+<span class="text-green-400">&lt;head&gt;</span>
+  <span class="text-green-400">&lt;link</span> <span class="text-cyan-400">rel</span>=<span class="text-orange-300">"stylesheet"</span> <span class="text-cyan-400">href</span>=<span class="text-orange-300">"styles.css"</span><span class="text-green-400">&gt;</span>
+<span class="text-green-400">&lt;/head&gt;</span>
+
+<span class="text-gray-500">/* styles.css file */</span>
+<span class="text-pink-400">.container</span> { <span class="text-cyan-400">max-width</span>: <span class="text-orange-300">1200px</span>; }</code></pre>
+</div>
+</div>
+<!-- c) Inline CSS -->
+<div class="group grid grid-cols-1 md:grid-cols-5 gap-0 rounded-xl overflow-hidden bg-surface-container-lowest border border-outline-variant/10 hover:shadow-xl transition-shadow duration-500">
+<div class="md:col-span-2 p-10 bg-tertiary-container/5 flex flex-col justify-center">
+<h4 class="text-2xl font-bold mb-4 text-tertiary-container">c) CSS nội tuyến (Inline)</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                            Sử dụng thuộc tính <code class="bg-tertiary-container/10 px-1 rounded text-tertiary-container">style</code> trực tiếp trong thẻ mở HTML. Thường dùng cho các trường hợp đặc biệt cần ghi đè các định dạng khác ngay lập tức.
+                        </p>
+</div>
+<div class="md:col-span-3 p-10 bg-on-surface font-mono text-sm overflow-x-auto">
+<pre class="text-blue-300"><code><span class="text-gray-500">&lt;!-- HTML file --&gt;</span>
+<span class="text-green-400">&lt;h1</span> <span class="text-cyan-400">style</span>=<span class="text-orange-300">"color:blue; text-align:center;"</span><span class="text-green-400">&gt;</span>
+  This is a heading
+<span class="text-green-400">&lt;/h1&gt;</span></code></pre>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-[#f3f4f5] dark:border-[#424752] bg-[#f8f9fa] dark:bg-[#191c1d]">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 max-w-[1440px] mx-auto text-[0.75rem] font-['Inter'] leading-relaxed">
+<div class="flex flex-col gap-2 mb-8 md:mb-0">
+<div class="font-bold text-[#191c1d] dark:text-[#f8f9fa]">Infix CSS</div>
+<p class="text-[#424752] dark:text-[#e7e8e9]">© 2024 Infix CSS. The Digital Curator.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:underline transition-all opacity-100 hover:opacity-70" href="#">Privacy</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:underline transition-all opacity-100 hover:opacity-70" href="#">Terms</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:underline transition-all opacity-100 hover:opacity-70" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Zalando Sans Expanded placeholder - normally this would be a specific CDN link, using Inter as fallback if not available -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#727784",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#66df75",
+              "on-tertiary-fixed-variant": "#643f00",
+              "inverse-on-surface": "#f0f1f2",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#7c4f00",
+              "on-secondary-container": "#007327",
+              "on-primary-fixed": "#001a40",
+              "background": "#f8f9fa",
+              "tertiary-fixed": "#ffddb5",
+              "on-tertiary-fixed": "#2a1800",
+              "on-surface": "#191c1d",
+              "inverse-primary": "#acc7ff",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#bbd0ff",
+              "on-tertiary-container": "#ffc579",
+              "surface-container-high": "#e7e8e9",
+              "secondary": "#006e25",
+              "surface-variant": "#e1e3e4",
+              "tertiary-fixed-dim": "#ffb957",
+              "surface-container": "#edeeef",
+              "primary": "#003f87",
+              "error-container": "#ffdad6",
+              "primary-container": "#0056b3",
+              "on-primary-fixed-variant": "#004491",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary-fixed-variant": "#00531a",
+              "on-surface-variant": "#424752",
+              "on-primary": "#ffffff",
+              "surface-tint": "#115cb9",
+              "surface-container-highest": "#e1e3e4",
+              "surface": "#f8f9fa",
+              "on-background": "#191c1d",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#002106",
+              "secondary-container": "#80f98b",
+              "surface-bright": "#f8f9fa",
+              "inverse-surface": "#2e3132",
+              "primary-fixed": "#d7e2ff",
+              "on-error": "#ffffff",
+              "surface-dim": "#d9dadb",
+              "outline-variant": "#c2c6d4",
+              "tertiary": "#5c3a00",
+              "secondary-fixed": "#83fc8e",
+              "primary-fixed-dim": "#acc7ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "zalando": ["Zalando Sans Expanded", "Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface" data-mode="connect">
+<!-- TopNavBar - Consistent across all pages based on COMPONENTS_58 -->
+<nav class="fixed top-0 w-full z-50 bg-[#f8f9fa]/80 dark:bg-[#191c1d]/80 backdrop-blur-md shadow-[0px_12px_32px_rgba(25,28,29,0.06)] h-20">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-10 h-full relative">
+<!-- Logo -->
+<a class="text-2xl font-black tracking-tighter text-[#191c1d] dark:text-[#f8f9fa] font-zalando" href="infix_css_Home/" style="">
+            Infix CSS
+        </a>
+<!-- Navigation Links (Centered) -->
+<div class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8 font-['Inter'] font-medium tracking-tight">
+<a class="text-[#003f87] dark:text-[#0056b3] font-bold border-b-2 border-[#003f87] pb-1" href="infix_css_Home/" style="">Home</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:text-[#003f87] transition-colors" href="infix_css_Team/" style="">Team</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:text-[#003f87] transition-colors" href="infix_css_Lessons/" style="">Lesson</a>
+</div>
+<!-- Trailing Action -->
+<div class="flex gap-4">
+<button class="px-5 py-2.5 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold active:scale-95 transform transition-transform hover:opacity-80 duration-200" style="">
+                Get Started
+            </button>
+</div>
+<!-- Bottom border from separation logic -->
+<div class="bg-[#f3f4f5] dark:bg-[#424752] h-[1px] w-full absolute bottom-0 left-0"></div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-10 pt-32 pb-24 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
+<div class="flex-1 space-y-8">
+<h1 class="text-6xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight" style="">CSS: <span class="text-primary" style="">Nắm vững nghệ thuật</span>&nbsp;thiết kế Web</h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed" style="">
+                        Bước vào môi trường học tập cao cấp được thiết kế để tập trung sâu vào nhận thức. Vượt qua những tài liệu mang tính thực dụng và làm chủ CSS thông qua trải nghiệm học tập chuyên sâu và được tuyển chọn kỹ lưỡng.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="px-8 py-4 rounded-full bg-tertiary-container text-white font-bold text-lg hover:translate-y-[-2px] transition-transform shadow-lg shadow-tertiary-container/20 flex items-center justify-center" href="infix_css_Lessons/" style="">
+                            Bắt đầu học CSS
+                        </a>
+<a class="px-8 py-4 rounded-full bg-white text-primary font-bold text-lg flex items-center gap-2 hover:bg-surface-container-low transition-colors border border-outline-variant/20" href="#" style=""><span class="material-symbols-outlined" style="">play_circle</span>Xem Video</a>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="w-full aspect-square rounded-[3rem] bg-gradient-to-tr from-primary/10 to-secondary/10 absolute -top-8 -right-8 -z-10 blur-3xl"></div>
+<div class="rounded-xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+<img alt="Hero Illustration" class="w-full h-[500px] object-cover" data-alt="Modern high-end home office setup with a clean desk, dual monitors showing elegant code editors, and soft natural window lighting" src="https://i.ibb.co/Mk8BD88N/Thi-t-k-ch-a-c-t-n-3.png" style="">
+</div>
+</div>
+</div>
+</section>
+<!-- CSS Learning Section Overview -->
+<section class="py-24 bg-surface-container-low" id="curriculum">
+<div class="max-w-7xl mx-auto px-10">
+<div class="bg-surface-container-lowest rounded-xl p-12 flex flex-col md:flex-row justify-between items-center gap-12 shadow-sm">
+<div class="flex-1">
+<h2 class="text-4xl font-bold mb-6 text-on-surface" style="">Chương trình giảng dạy được tuyển chọn</h2>
+<p class="text-lg text-on-surface-variant mb-8 leading-relaxed" style="">
+                            Chương trình của chúng tôi sẽ đưa bạn từ những kiến ​​thức cơ bản nhất về bộ chọn và mô hình hộp đến các khái niệm nâng cao như CSS Grid và hoạt ảnh mượt mà. Được thiết kế bởi các chuyên gia trong ngành, đáp ứng các tiêu chuẩn web hiện đại.
+                        </p>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary-container/20 text-secondary font-medium" style="">
+<span class="material-symbols-outlined text-sm" style="">check_circle</span> 6 Core Modules
+                            </div>
+<div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary-container/20 text-secondary font-medium" style="">
+<span class="material-symbols-outlined text-sm" style="">check_circle</span> Interactive Code Sandboxes
+                            </div>
+<div class="flex-shrink-0">
+  <a href="infix_css_Lessons/">
+    <button class="px-10 py-5 rounded-full bg-primary text-white font-bold text-lg hover:scale-105 transition-transform flex items-center gap-3">
+      Khám Phá Bài Học
+      <span class="material-symbols-outlined">arrow_forward</span>
+    </button>
+  </a>
+</div>
+</div>
+</section>
+<!-- Video Section -->
+<section class="py-32 px-10" id="video">
+<div class="max-w-5xl mx-auto text-center space-y-12">
+<div class="space-y-4">
+<span class="text-secondary font-bold tracking-widest text-sm uppercase" style="">Behind the Scenes</span>
+<h2 class="text-5xl font-black text-on-surface" style="">Video Giới Thiệu Nhóm</h2>
+<p class="text-lg text-on-surface-variant max-w-2xl mx-auto" style="">
+                        Hãy cùng gặp gỡ những người đứng sau The Academic Atelier. Chúng tôi đam mê việc thu hẹp khoảng cách giữa lý thuyết thiết kế và ứng dụng kỹ thuật.
+                    </p>
+</div>
+<div class="aspect-video rounded-xl overflow-hidden bg-slate-900 relative group shadow-2xl">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/bQnSSVESxl4"></iframe>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-32 bg-surface" id="team">
+<div class="max-w-7xl mx-auto px-10">
+<div class="flex justify-between items-end mb-16">
+<div class="space-y-4">
+<h2 class="text-5xl font-black text-on-surface" style="">Thành viên</h2>
+<p class="text-on-surface-variant text-lg" style="">Các thành viên phụ trách phát triển và đóng góp cho website.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+<!-- Member Card 1 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-10px] transition-transform shadow-sm group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-8 ring-4 ring-primary/5 transition-all group-hover:ring-primary/20">
+<img alt="Viết Duy" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJj2hKzEt9vaLA1vdDjpaDQoabN5ybwckej3yyWPeGXPXTTgVxUndca9mZqzteF7LS2zDDKAeQtyxQdqWVHnMhzIE80dKwSqKg8Zvws9CHq_nswJ4i7mz4IFqn0qM4dSdk_xWop09FmCIco4lITpImd6huoFVJ2wfynVckPfhFI39rQYiVjk1rHNQKEL92H0pBQKjNcCJ3jZ8rwGwfjjq7N18NwOx1tYYeN69O6cwrlzBs5qVEbh9NGkSCcEepd3mjUuXYCALZEzw" style="">
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2" style="">Viết Duy</h3>
+<p class="text-primary font-bold text-sm uppercase tracking-wider mb-4" style=""><span style="letter-spacing: 0.7px;" class="">Lead Developer</span></p>
+<p class="text-on-surface-variant leading-relaxed" style="">Dẫn dắt đội ngũ phát triển và định hướng kiến trúc hệ thống.</p>
+</div>
+<!-- Member Card 2 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-10px] transition-transform shadow-sm group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-8 ring-4 ring-primary/5 transition-all group-hover:ring-primary/20">
+<img alt="Hoàng Phúc" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBcNPwxnMUAqZHNju0NMFY3E2tAVftkfqbl7UPuQwbs9Lp-mXGBbs1OQZG8kne2FoyBYLt-ld6QX0toRD01rCyLM7c9-DJTL8JnttPoZ76AVRks9OVTkLUL7zdUAiK0sSI9ZGoWqqFljYrU5eD7vXxlfWgpyMyjPcy1gS0-mi6iZqDG4zTQCeHt2iX7LDywNr_fGB2DbZCBujsfyJqDUA_lekO2U5fM7Wa6591ccjyEkw9o2C_pmy_AyPci8Ibq98oDG8C48qB1w4" style="">
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2" style="">Hoàng Phúc</h3>
+<p class="text-primary font-bold text-sm uppercase tracking-wider mb-4" style="">Developer</p>
+<p class="text-on-surface-variant leading-relaxed" style="">Chịu trách nhiệm lập trình và tối ưu hóa các tính năng giao diện.</p>
+</div>
+<!-- Member Card 3 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-10px] transition-transform shadow-sm group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-8 ring-4 ring-primary/5 transition-all group-hover:ring-primary/20">
+<img alt="Hoàng Trân" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ33Ts2nC9Mug_sD-V144hjaE5AjKjfYCwoPPcbvDk5i_X5flVWCYjbBiSqDtoFMcP6OALpIb4bgc5Q_lZAuac5Ed17KMlOFJoMyl9Sneo5kl3UolGQIuUYog-StmKbEMPLRDCXRelqJFmcAOtdhh5kuYWDBdZaPbddm7wkz1iloDn1dYJ0WzXprUEnLB-EQcXEpXUHJ4hr3ivwGmBnByrBrSQPrOL2CdyrpTIEbwguYBycIGntHzOruQHkgvhUzojtKmIhuwXKDg" style="">
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2" style="">Hoàng Trân</h3>
+<p class="text-primary font-bold text-sm uppercase tracking-wider mb-4" style="">Presenter</p>
+<p class="text-on-surface-variant leading-relaxed" style="">Đại diện nhóm thuyết trình và truyền tải ý tưởng sản phẩm.</p>
+</div>
+<!-- Member Card 4 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-10px] transition-transform shadow-sm group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-8 ring-4 ring-primary/5 transition-all group-hover:ring-primary/20">
+<img alt="Ngọc Ánh" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnE46u0Y4Z_LwM4p3B3fS3Xz4S6T9E8r7w7x8y9z0A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U" style="">
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2" style="">Ngọc Ánh</h3>
+<p class="text-primary font-bold text-sm uppercase tracking-wider mb-4" style="">Presenter</p>
+<p class="text-on-surface-variant leading-relaxed" style="">Phụ trách giới thiệu các phân đoạn chuyên sâu về kỹ thuật.</p>
+</div>
+<!-- Member Card 5 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-10px] transition-transform shadow-sm group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-8 ring-4 ring-primary/5 transition-all group-hover:ring-primary/20">
+<img alt="Đăng Khoa" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_vWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHh" style="">
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2" style="">Đăng Khoa</h3>
+<p class="text-primary font-bold text-sm uppercase tracking-wider mb-4" style="">Presenter</p>
+<p class="text-on-surface-variant leading-relaxed" style="">Chịu trách nhiệm điều phối và dẫn dắt buổi báo cáo dự án.</p>
+</div>
+<!-- Member Card 6 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-10px] transition-transform shadow-sm group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-8 ring-4 ring-primary/5 transition-all group-hover:ring-primary/20">
+<img alt="Hoàng Hảo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1D2E3F4G5H6I7J8K9L0M1N2O3P4Q5R6S7T8U9V0W1X2Y3Z4A5B6C7D8E9F0G1H2I3J4K5L6M7N8O9P" style="">
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2" style="">Hoàng Hảo</h3>
+<p class="text-primary font-bold text-sm uppercase tracking-wider mb-4" style="">Contributor</p>
+<p class="text-on-surface-variant leading-relaxed" style="">Đóng góp ý tưởng và xây dựng cơ sở dữ liệu cho bài học.</p>
+</div>
+<!-- Member Card 7 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-10px] transition-transform shadow-sm group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-8 ring-4 ring-primary/5 transition-all group-hover:ring-primary/20">
+<img alt="Tường Vy" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW5_QnAtOFNLsnjPbkbQUVSUCi4MAez97kY1NXeC3KG0kQxiu-Irmf4Xj02LpD8S5S2-Je8R_D1jYFFNPOkKynLiv01i-9LRsJ1TGQWLaUt6jWW3NME7Whd66tz1xM7nZhm2MYou4MrN_ZZ3TFSA3bd26zUMZy_IMgVvdNP8ZMsnzfiZeG-NHn6NVjtjcO8bLNYzpQw6PkT5b_tXc0LFyJ4JnW7e4wQhwbDV7qrf3AwP997GdRxMX-zouoi4WjL6eGlqI6FiLVX0A" style="">
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2" style="">Tường Vy</h3>
+<p class="text-primary font-bold text-sm uppercase tracking-wider mb-4" style="">Contributor</p>
+<p class="text-on-surface-variant leading-relaxed" style="">Tham gia nghiên cứu và biên soạn nội dung cho các module nâng cao.</p>
+</div>
+<!-- Member Card 8 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-10px] transition-transform shadow-sm group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-8 ring-4 ring-primary/5 transition-all group-hover:ring-primary/20">
+<img alt="Trung Kiên" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCru_83XFiCO9vlbSahw8YOvhgwZc5fe7cY-CdTWGcAL5L3zaRkr9aaGi7mI2M8Ti4b3XcckBJXgUAIlzHkW1L3V-tH9W0eDGav7bxM_Vq7pbyEQ6TpWUE_g8a8D9ZtwP8MrVZAAW2dtMhxnaIaTQFSToo1lSOpS73CAJE0ak9bmkLfWQPmX8uwq0Fi9KBTJ64hphbF9TOj6w033dTUNQekb2OugCxhMHPBE9fTJPzHO-MAwvNjUCI0lRHud8_iK5MZ7WB71uqRsFU" style="">
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2" style="">Trung Kiên</h3>
+<p class="text-primary font-bold text-sm uppercase tracking-wider mb-4" style="">Contributor</p>
+<p class="text-on-surface-variant leading-relaxed" style="">Hỗ trợ kiểm thử và phản hồi về trải nghiệm người dùng trên hệ thống.</p>
+</div>
+<!-- Member Card 9 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:translate-y-[-10px] transition-transform shadow-sm group">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-8 ring-4 ring-primary/5 transition-all group-hover:ring-primary/20">
+<img alt="Ngọc Bảo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkTsyZ-OoSLVKaZEwDOUvnMiVn4IbzOE1nDOvySYh-qRiptMIWvQVGQmMgg36nb4oACCwBbDU3oQRGqHGELT63de7_WsArGFKCWJNysbC11BaeG9ADGrRoYx-fAivQ0wS_l1BvCRnaN3l5kz_3NwpAE7sC6z8xTpwNz0TlfZGrjQkXT2Zc38ZvnS1tDbk2n7FZ9Vmce0Eg9OzaeKLNt9tR4VZBHTCThhPZkgWbzuzho0Zk_k3oWejOH0lWmNzpVWX02oO3oOGGtsA" style="">
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2" style="">Ngọc Bảo</h3>
+<p class="text-primary font-bold text-sm uppercase tracking-wider mb-4" style="">Contributor</p>
+<p class="text-on-surface-variant leading-relaxed" style="">Phụ trách tối ưu hóa hiệu suất và khả năng truy cập cho trang web.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer from COMPONENTS_58 -->
+<footer class="w-full py-12 border-t border-[#f3f4f5] dark:border-[#424752] bg-[#f8f9fa] dark:bg-[#191c1d] mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 max-w-[1440px] mx-auto text-[0.75rem] font-['Inter'] leading-relaxed">
+<div class="flex flex-col items-center md:items-start gap-4 mb-8 md:mb-0">
+<div class="font-bold text-[#191c1d] dark:text-[#f8f9fa] text-xl" style="">Infix CSS</div>
+<p class="text-[#424752] dark:text-[#e7e8e9]" style="">© 2024 Infix CSS. The Digital Curator.</p>
+</div>
+<div class="flex gap-10">
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:underline transition-all" href="#" style="">Privacy</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:underline transition-all" href="#" style="">Terms</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:underline transition-all" href="#" style="">Support</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:underline transition-all" href="#" style="">Github</a>
+</div>
+</div>
+</footer>
+</body></html>

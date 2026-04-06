@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Team | Infix CSS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'Zalando Sans Expanded';
+            src: url('https://db.onlinewebfonts.com/t/20349880f08404e9089069d3e813a347.eot');
+            src: url('https://db.onlinewebfonts.com/t/20349880f08404e9089069d3e813a347.eot?#iefix') format('embedded-opentype'),
+            url('https://db.onlinewebfonts.com/t/20349880f08404e9089069d3e813a347.woff2') format('woff2'),
+            url('https://db.onlinewebfonts.com/t/20349880f08404e9089069d3e813a347.woff') format('woff'),
+            url('https://db.onlinewebfonts.com/t/20349880f08404e9089069d3e813a347.ttf') format('truetype'),
+            url('https://db.onlinewebfonts.com/t/20349880f08404e9089069d3e813a347.svg#ZalandoSans-ExpandedExtraBold') format('svg');
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#2a1800",
+              "secondary-container": "#80f98b",
+              "error-container": "#ffdad6",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-tint": "#115cb9",
+              "outline": "#727784",
+              "primary-fixed": "#d7e2ff",
+              "inverse-primary": "#acc7ff",
+              "surface-container": "#edeeef",
+              "secondary": "#006e25",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed-variant": "#643f00",
+              "tertiary-fixed": "#ffddb5",
+              "on-secondary-container": "#007327",
+              "on-primary-fixed-variant": "#004491",
+              "secondary-fixed": "#83fc8e",
+              "on-tertiary-container": "#ffc579",
+              "on-primary-fixed": "#001a40",
+              "surface": "#f8f9fa",
+              "surface-bright": "#f8f9fa",
+              "primary-container": "#0056b3",
+              "background": "#f8f9fa",
+              "on-primary-container": "#bbd0ff",
+              "surface-container-high": "#e7e8e9",
+              "on-surface-variant": "#424752",
+              "secondary-fixed-dim": "#66df75",
+              "primary": "#003f87",
+              "on-secondary-fixed": "#002106",
+              "tertiary": "#5c3a00",
+              "outline-variant": "#c2c6d4",
+              "on-secondary": "#ffffff",
+              "primary-fixed-dim": "#acc7ff",
+              "tertiary-fixed-dim": "#ffb957",
+              "tertiary-container": "#7c4f00",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f3f4f5",
+              "inverse-surface": "#2e3132",
+              "error": "#ba1a1a",
+              "on-background": "#191c1d",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-fixed-variant": "#00531a",
+              "surface-container-highest": "#e1e3e4",
+              "on-surface": "#191c1d",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-dim": "#d9dadb",
+              "on-tertiary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "brand": ["Zalando Sans Expanded", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f8f9fa]/80 dark:bg-[#191c1d]/80 backdrop-blur-md shadow-[0px_12px_32px_rgba(25,28,29,0.06)] h-20">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-10 h-full relative">
+<a class="text-2xl font-black tracking-tighter text-[#191c1d] dark:text-[#f8f9fa] font-brand" href="../">Infix CSS</a>
+<nav class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8 font-['Inter'] font-medium tracking-tight">
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:text-[#003f87] transition-colors" href="../">Home</a>
+<a class="text-[#003f87] dark:text-[#0056b3] font-bold border-b-2 border-[#003f87] pb-1" href="../infix_css_Team/">Team</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:text-[#003f87] transition-colors" href="../infix_css_Lessons/">Lesson</a>
+</nav>
+<div class="flex gap-4 items-center">
+<a class="bg-gradient-to-br from-[#003f87] to-[#0056b3] text-white px-6 py-2 rounded-full font-bold shadow-md hover:opacity-80 active:scale-95 transition-all duration-200" href="{{DATA:SCREEN:SCREEN_54}}">Get Started</a>
+</div>
+<div class="bg-[#f3f4f5] dark:bg-[#424752] h-[1px] w-full absolute bottom-0 left-0"></div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 md:px-10 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-16">
+<h1 class="text-5xl font-black leading-tight tracking-tight text-on-surface mb-6">Các thành viên<br/><span class="text-primary">Phát triển &amp; đóng góp</span></h1>
+<p class="text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Đằng sau Infix CSS là chúng tôi – đội ngũ những nhà giáo dục, nhà thiết kế và nhà phát triển, luôn trăn trở làm sao để giáo dục kỹ thuật không chỉ là dạy và học, mà còn là một trải nghiệm tinh hoa.
+        </p>
+</section>
+<!-- Simplified Team List/Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Member 1: Viết Duy -->
+<div class="flex gap-4 items-start border-l-2 border-primary/20 pl-6 py-2">
+<img alt="Viết Duy" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApTOiLHirmDTGaBqLb0Ck8hQPExTnD18MT6X61_rivtuJesYetW7H-JLKen6-CKrM52J2yaGynylwNBVfmSauIYa5ppQoRHSy1kIG4NDTqFFCF4sTtxcbHejDe41mgZP5AsPsFyP3ajpp2PYf6ybB3pS8FQZN6HG9pK3DbgG7ofb0GDUT9KxIZszQVQn2UTFtVQVIDuLAjksl40CAtO21JGq_WDpI2H34VZijax2buijSqzzl7MflUSOL4iciK7XEH3d3xyuxE11o"/>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Viết Duy</h3>
+<p class="text-primary text-sm font-semibold uppercase tracking-wider mb-2">Lead Developer</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Chịu trách nhiệm chính trong việc kiến trúc hệ thống cốt lõi.</p>
+</div>
+</div>
+<!-- Member 2: Hoàng Phúc -->
+<div class="flex gap-4 items-start border-l-2 border-outline-variant pl-6 py-2">
+<img alt="Hoàng Phúc" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz3rpmYdMvx4kj1QdMkhUwqeZJ-GTnGuJraTaAFjTHcCD7fcpo0E9USm9RMbBNKcprN7ZeR3c789gWsvsPdgHjFcWBGSUySM3n3HucAjhVbvmt0zoJHEzLR7wYyOJLZRX45repFovSkCPfUGzck4_at6neH7GMk-mpexCvniisgqOxJdZHDqXeA31NJq3HZQyJPrdZoSwQ5A51IX-4y5b0FotFRhqAedCL7zp_HaS80xSNN4xGNqBIU2phunZC0DAhn-70hZcwlSQ"/>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Hoàng Phúc</h3>
+<p class="text-primary text-sm font-semibold uppercase tracking-wider mb-2">Developer</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Phát triển các tính năng tương tác và tối ưu hóa trải nghiệm.</p>
+</div>
+</div>
+<!-- Member 3: Hoàng Trân -->
+<div class="flex gap-4 items-start border-l-2 border-outline-variant pl-6 py-2">
+<img alt="Hoàng Trân" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiQoMOxl4aFSWxB5cK-YbX6B2i5lJP3NY-7wUYkprLPfbye5MElfTZ-bxsDD9gaHT0xmN_I8uIwvpssfeKAzEGWbO3jQjiPioW6FGseuEA051Qw6I6L4C1hjHZGyeqrFJXTZoe62UV_rMV_7XXyA9l-Se2CSoeEVjx0gqPHlIpWJLbo_odPYs0ocDZRLVYk5IfXXZkEeALxGm-_fT-OlMBsrLHEYm2y_kUf8mHVo2znYuiFXFiv_bWFcVZapA6qm32vapodszmjnk"/>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Hoàng Trân</h3>
+<p class="text-secondary text-sm font-semibold uppercase tracking-wider mb-2">Presenter</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Đại diện hình ảnh và thuyết trình các nội dung chuyên môn.</p>
+</div>
+</div>
+<!-- Member 4: Ngọc Ánh -->
+<div class="flex gap-4 items-start border-l-2 border-outline-variant pl-6 py-2">
+<img alt="Ngọc Ánh" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfsTByLqXKyLms2qyf1dKHoOU8xUcOeaxy3eda7k-wwAD8viHADJvBCtyQ-LHWIhJO9RFNs_Yg-7FB1UVzojPZkK-bD8wXBRqrUalRtTmy69UQc7D56PO5gg7Cosd8Sq8ab0TLY73iu8ONRbEgAeSKQ-ThDmgoJcHCPIscL0MVbu0LjW4c3Gub6o0nJOQvaIaNjuKnTXJ1_APSWwi-zleDsHLG2bg5i-YB9osoR4_85IhmA24pDuWzlO3H1MXty13KD7CnV0tNtGs"/>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Ngọc Ánh</h3>
+<p class="text-tertiary text-sm font-semibold uppercase tracking-wider mb-2">Presenter</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Truyền tải kiến thức qua các video hướng dẫn chuyên sâu.</p>
+</div>
+</div>
+<!-- Member 5: Đăng Khoa -->
+<div class="flex gap-4 items-start border-l-2 border-outline-variant pl-6 py-2">
+<img alt="Đăng Khoa" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfq8wgRBkj7lIhCu-f9iYLZrwbxkNRjXoBHqO4oFaMLgDq-4BBP04XZaVhGZY__PydyoB4Pq9-psS9g1TR-Ii-fdXvA79BXZQ49oD6eQDfewQOFEVqjPTAK6v3oY16uxbarRJgEjknesPQBLtw3mRICNURCPlAsiiu-FbD2dQQirU5F2PrrvC0kJhecBAcyfRwqRKN0NQd9C2eWaDCeVpOX5fLXWn6peR5UDWv7AUCzAAcEAiDQANDAk5XW8HFo323IXhJhUhbV5s"/>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Đăng Khoa</h3>
+<p class="text-secondary text-sm font-semibold uppercase tracking-wider mb-2">Presenter</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Quảng bá và kết nối cộng đồng học thuật với dự án.</p>
+</div>
+</div>
+<!-- Member 6: Hoàng Hảo -->
+<div class="flex gap-4 items-start border-l-2 border-outline-variant pl-6 py-2">
+<img alt="Hoàng Hảo" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0JKW5_SZBSx_iO8eMrHIX8QDXGdH7EyjMCkpzcaiLYvpoVcjkAwyYg8Vui96XYioQZ9nHkJzIZGgEFd8DrQpYw1dk1WiXaz6ggSfBqlKsLsjGn_foockaXogLiK-Zj0F1g6YcpdC5b8M2cai4MPxpZM2IA2U8J29pVnJk-UVht2mhLDZ5KvC69YUlzhg8_UFXr08iPo8nrjKMxlcwpmXNTkTqmYftAIoyaz988pROUth455oSpmcnG8xd0JrgYqH3_Z9pdwJ7K7o"/>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Hoàng Hảo</h3>
+<p class="text-primary text-sm font-semibold uppercase tracking-wider mb-2">Contributor</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Hỗ trợ biên soạn tài liệu và tổng hợp kiến thức.</p>
+</div>
+</div>
+<!-- Member 7: Tường Vy -->
+<div class="flex gap-4 items-start border-l-2 border-outline-variant pl-6 py-2">
+<img alt="Tường Vy" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzV8MVCLl0mnLEGWraPq44kMLJk5iByY-V3x1WLs7IIHVm_pQ9k78n0iPlCC6sG_O9JIuV1o-emUwh_LeM5Dd8lM9EG-2R9fVf2hSZQVwkuW0tyBfsxeWGcnWuiBo8U_dTZEo8jGWK_0TIDKnuvcJqDIf-sBZ4ourC-BL3u13Lpx4AJ4w8PewI-_LjpJwmJ6jHPIB6rDPzGJsR7D_ytKG3aebkvfuv7_-V3lBbtwc_aLYjU90shm8gfDdlg0SPKdIe9i9wFKkZjFY"/>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Tường Vy</h3>
+<p class="text-primary text-sm font-semibold uppercase tracking-wider mb-2">Contributor</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Đóng góp ý tưởng sáng tạo và hỗ trợ nội dung học thuật.</p>
+</div>
+</div>
+<!-- Member 8: Trung Kiên -->
+<div class="flex gap-4 items-start border-l-2 border-outline-variant pl-6 py-2">
+<img alt="Trung Kiên" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApTOiLHirmDTGaBqLb0Ck8hQPExTnD18MT6X61_rivtuJesYetW7H-JLKen6-CKrM52J2yaGynylwNBVfmSauIYa5ppQoRHSy1kIG4NDTqFFCF4sTtxcbHejDe41mgZP5AsPsFyP3ajpp2PYf6ybB3pS8FQZN6HG9pK3DbgG7ofb0GDUT9KxIZszQVQn2UTFtVQVIDuLAjksl40CAtO21JGq_WDpI2H34VZijax2buijSqzzl7MflUSOL4iciK7XEH3d3xyuxE11o"/>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Trung Kiên</h3>
+<p class="text-primary text-sm font-semibold uppercase tracking-wider mb-2">Contributor</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Tham gia vào quy trình kiểm thử và đảm bảo chất lượng.</p>
+</div>
+</div>
+<!-- Member 9: Ngọc Bảo -->
+<div class="flex gap-4 items-start border-l-2 border-outline-variant pl-6 py-2">
+<img alt="Ngọc Bảo" class="w-16 h-16 rounded-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz3rpmYdMvx4kj1QdMkhUwqeZJ-GTnGuJraTaAFjTHcCD7fcpo0E9USm9RMbBNKcprN7ZeR3c789gWsvsPdgHjFcWBGSUySM3n3HucAjhVbvmt0zoJHEzLR7wYyOJLZRX45repFovSkCPfUGzck4_at6neH7GMk-mpexCvniisgqOxJdZHDqXeA31NJq3HZQyJPrdZoSwQ5A51IX-4y5b0FotFRhqAedCL7zp_HaS80xSNN4xGNqBIU2phunZC0DAhn-70hZcwlSQ"/>
+<div>
+<h3 class="text-xl font-bold text-on-surface">Ngọc Bảo</h3>
+<p class="text-primary text-sm font-semibold uppercase tracking-wider mb-2">Contributor</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Hỗ trợ cộng đồng và giải đáp các thắc mắc kỹ thuật.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#f8f9fa] dark:bg-[#191c1d] border-t border-[#f3f4f5] dark:border-[#424752] py-12">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 max-w-[1440px] mx-auto text-[0.75rem] font-['Inter'] leading-relaxed">
+<div class="mb-6 md:mb-0">
+<div class="font-bold text-[#191c1d] dark:text-[#f8f9fa] text-lg mb-2">Infix CSS</div>
+<p class="text-[#424752] dark:text-[#e7e8e9]">© 2024 Infix CSS. The Digital Curator.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:underline transition-all" href="#">Privacy</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:underline transition-all" href="#">Terms</a>
+<a class="text-[#424752] dark:text-[#e7e8e9] hover:underline transition-all" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>
